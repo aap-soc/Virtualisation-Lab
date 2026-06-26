@@ -1,21 +1,21 @@
 ### Virtualisation Lab – Ubuntu on VirtualBox
 CompTIA A+ Core 2 | Independent Project | June 2026
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 A hands on virtualisation project where I deployed Ubuntu Desktop as a guest OS inside Oracle VirtualBox on a Windows 11 host machine. This project covers everything from planning system resources, to installation, to terminal-based verification, including a real troubleshooting scenario I ran into and resolved.
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Project Overview
 
-Detail                       |                                Info 
+**Detail**                   |                  **Info** 
 ___________________________________________________________________________
-Host OS                      |                       Windows 11 Pro (64-bit)
-Hypervisor                   |                     Oracle VirtualBox (Type 2)
-Guest OS                     |                 Ubuntu Desktop 25.04 (Plucky Puffin)
-RAM Allocated                |                                 6 GB
-CPU Cores Allocated          |                                  3
-Storage Allocated            |                                30 GB
+Host OS                      |             Windows 11 Pro (64-bit)
+Hypervisor                   |             Oracle VirtualBox (Type 2)
+Guest OS                     |         Ubuntu Desktop 25.04 (Plucky Puffin)
+RAM Allocated                |                      6 GB
+CPU Cores Allocated          |                       3
+Storage Allocated            |                     30 GB
 
 
 
@@ -28,7 +28,7 @@ In this project I used a Type 2 **Hypervisor** (VirtualBox), which runs on top o
 **Why this matters for cybersecurity:
 **Running an isolated VM means I can test commands, configurations, and tools without risking my host system, exactly how security professionals build lab environments.
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##   Step-by-Step Setup
 
@@ -42,7 +42,7 @@ What I checked:
 - Free Disk Space: 1.86 TB available ✅
 - Virtualisation enabled in BIOS: Yes ✅ (confirmed via Task Manager)
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Step 2 - Download Ubuntu ISO
 
@@ -56,7 +56,7 @@ https://ubuntu.com/download/desktop
 
 My host machine exceeded all of these, so I could safely allocate the minimum to the VM.
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Step 3 - Download and Install Oracle VirtualBox
 
@@ -65,13 +65,13 @@ I downloaded Oracle VirtualBox from:
 
 VirtualBox is a free, open-source Type 2 hypervisor, meaning it installs like a normal application on top of your existing OS.
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Step 4 — Create the Virtual Machine
 
 Inside VirtualBox I clicked New and configured:
 
-Setting                      |                     Info 
+**Setting**                  |                  **Info** 
 ___________________________________________________________________________
 VM Name                      |                 dreUnbuntuVM
 OS Type                      |                    Linux
@@ -82,7 +82,7 @@ Disk Size                    |                    30 GB
 
 I left Unattended Installation unticked to install Ubuntu manually and go through each step myself.
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Step 5 - Installing Ubuntu
 
@@ -93,7 +93,7 @@ With the ISO attached, I started the VM and followed the Ubuntu on-screen instal
 - Set up username and password
 - Completed installation and rebooted into Ubuntu Desktop
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 6 - Verify the Setup via Terminal
 
@@ -102,7 +102,7 @@ Once inside Ubuntu, I opened the terminal and ran the following commands to conf
 # Gain temporary root access
 sudo bash
 
-# Confirm who I'm logged in as
+# Confirm who I am logged in as
 whoami
 # Output: root
 
@@ -124,3 +124,60 @@ exit
 # Confirm back to standard user
 whoami
 # Output: ubuntu
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Troubleshooting -  Graphics Controller Issue
+
+# The Problem
+
+After setting up the VM, VirtualBox displayed a warning:
+
+
+
+"Invalid settings detected - Display: Screen page: The virtual machine is configured to use a graphics controller other than the recommended setting (VMSVGA)."
+
+
+
+During the initial setup I had selected VBoxVGA instead of VMSVGA. Once Ubuntu booted, this caused the mouse cursor to not display correctly inside the VM. I could not see what I was clicking on, making the environment almost unreliable.
+
+
+# The Fix:
+
+1. Went to Settings → Display → Screen
+2. Changed Graphics Controller from VBoxVGA → VMSVGA
+3. Restarted the VM
+
+After I applied the change, the warning disappeared, the mouse cursor appeared correctly, and the display worked as expected.
+
+# What I Learned
+
+- Graphics controller choice directly impacts how the VM renders display output
+- **VMSVGA** is the correct controller for Linux/Ubuntu guests in VirtualBox
+- **VBoxSVGA** is better suited for Windows guests
+- Small configuration choices in virtualisation can have a significant impact on usability
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ # Tools Used
+
+**Tool**                     |                 **Purpose** 
+___________________________________________________________________________
+Oracle VirtualBox            |          Type 2 Hypervisor to host the VM
+Ubuntu Desktop 25.04         |             Guest Operating System
+Windows 11 Pro               |             Host Operating System
+Ubuntu Terminal              |        Verification and command-line testing
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Key Concepts Covered
+
+
+- Type 1 vs Type 2 Hypervisors
+- VM resource allocation (RAM, CPU, storage)
+- Guest OS installation from ISO
+- Linux terminal basics (**whoami**, **apt update**, **ip -a**, **lshw**)
+- Root vs standard user privileges (sudo, exit)
+- Virtualisation troubleshooting
+ 

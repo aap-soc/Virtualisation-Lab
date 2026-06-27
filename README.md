@@ -178,6 +178,10 @@ Ubuntu Terminal              |        Verification and command-line testing
 - VM resource allocation (RAM, CPU, storage)
 - Guest OS installation from ISO
 - Linux terminal basics (**whoami**, **apt update**, **ip -a**, **lshw**)
-- Root vs standard user privileges (sudo, exit)
+- Root vs standard user privileges (**sudo**, **exit**)
 - Virtualisation troubleshooting
  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# CompTIA A+ Core 2  - Independent Virtualisation Project Submitted: June 2026
+#ShareContentCompTIA

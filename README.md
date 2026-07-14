@@ -8,16 +8,14 @@ A hands on virtualisation project where I deployed Ubuntu Desktop as a guest OS 
 
 ## Project Overview
 
-**Detail**                   |                  **Info** 
-___________________________________________________________________________
-Host OS                      |             Windows 11 Pro (64-bit)
-Hypervisor                   |             Oracle VirtualBox (Type 2)
-Guest OS                     |         Ubuntu Desktop 25.04 (Plucky Puffin)
-RAM Allocated                |                      6 GB
-CPU Cores Allocated          |                       3
-Storage Allocated            |                     30 GB
-
-
+|     **Detail**              |               **Info**                       |
+|-----------------------------|----------------------------------------------|
+|VM Name                      |            Windows 11 Pro (64-bit)           |
+|Hypervisor                   |          Oracle VirtualBox (Type 2)          |
+|Guest OS                     |      Ubuntu Desktop 25.04 (Plucky Puffin)    | 
+|RAM Allocated                |                    6 GB                      |       
+|CPU Cores Allocated          |                      3                       |
+|Storage Allocated            |                    30 GB                     |
 
 ##  What is Virtualisation?
 

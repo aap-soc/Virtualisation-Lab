@@ -71,14 +71,15 @@ VirtualBox is a free, open-source Type 2 hypervisor, meaning it installs like a 
 
 Inside VirtualBox I clicked New and configured:
 
-**Setting**                  |                  **Info** 
-___________________________________________________________________________
-VM Name                      |                 dreUnbuntuVM
-OS Type                      |                    Linux
-OS Distribution              |                 Ubuntu(64-bit)
-Base Memory                  |                 6000 MB (60 GB)
-Number o fCPUs               |                      3
-Disk Size                    |                    30 GB
+|      **Setting**            |               **Info**                       |
+|-----------------------------|----------------------------------------------|
+|VM Name                      |                 dreUnbuntuVM                 |
+|OS Type                      |                    Linux                     |
+|OS Distribution              |                 Ubuntu(64-bit)               | 
+|Base Memory                  |                 6000 MB (60 GB)              |       
+|Number o fCPUs               |                      3                       |
+|Disk Size                    |                    30 GB                     |
+ 
 
 I left Unattended Installation unticked to install Ubuntu manually and go through each step myself.
 
@@ -162,12 +163,12 @@ After I applied the change, the warning disappeared, the mouse cursor appeared c
 
  # Tools Used
 
-**Tool**                     |                 **Purpose** 
-___________________________________________________________________________
-Oracle VirtualBox            |          Type 2 Hypervisor to host the VM
-Ubuntu Desktop 25.04         |             Guest Operating System
-Windows 11 Pro               |             Host Operating System
-Ubuntu Terminal              |        Verification and command-line testing
+|      **Tool**               |               **Purpose**                    |
+|-----------------------------|----------------------------------------------|
+|Oracle VirtualBox            |          Type 2 Hypervisor to host the VM    |
+|Ubuntu Desktop 25.04         |             Guest Operating System           |
+|Windows 11 Pro               |             Host Operating System            |
+|Ubuntu Terminal              |        Verification and command-line testing |
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

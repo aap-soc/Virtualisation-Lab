@@ -1,10 +1,10 @@
 ### Virtualisation Lab – Ubuntu on VirtualBox
 CompTIA A+ Core 2 | Independent Project | June 2026
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 A hands on virtualisation project where I deployed Ubuntu Desktop as a guest OS inside Oracle VirtualBox on a Windows 11 host machine. This project covers everything from planning system resources, to installation, to terminal-based verification, including a real troubleshooting scenario I ran into and resolved.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 ## Project Overview
 
@@ -26,7 +26,7 @@ In this project I used a Type 2 **Hypervisor** (VirtualBox), which runs on top o
 **Why this matters for cybersecurity:
 **Running an isolated VM means I can test commands, configurations, and tools without risking my host system, exactly how security professionals build lab environments.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 ##   Step-by-Step Setup
 
@@ -40,8 +40,7 @@ What I checked:
 - Free Disk Space: 1.86 TB available ✅
 - Virtualisation enabled in BIOS: Yes ✅ (confirmed via Task Manager)
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+----------------------------------------------------------------------------------------------------------------------------------
 # Step 2 - Download Ubuntu ISO
 
 I downloaded the Ubuntu Desktop ISO from the official site:
@@ -54,7 +53,7 @@ https://ubuntu.com/download/desktop
 
 My host machine exceeded all of these, so I could safely allocate the minimum to the VM.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Step 3 - Download and Install Oracle VirtualBox
 
@@ -63,7 +62,7 @@ I downloaded Oracle VirtualBox from:
 
 VirtualBox is a free, open-source Type 2 hypervisor, meaning it installs like a normal application on top of your existing OS.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 
 # Step 4 — Create the Virtual Machine
 
@@ -81,7 +80,7 @@ Inside VirtualBox I clicked New and configured:
 
 I left Unattended Installation unticked to install Ubuntu manually and go through each step myself.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Step 5 - Installing Ubuntu
 
@@ -92,9 +91,9 @@ With the ISO attached, I started the VM and followed the Ubuntu on-screen instal
 - Set up username and password
 - Completed installation and rebooted into Ubuntu Desktop
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
-Step 6 - Verify the Setup via Terminal
+# Step 6 - Verify the Setup via Terminal
 
 Once inside Ubuntu, I opened the terminal and ran the following commands to confirm everything was working:
 
@@ -124,7 +123,7 @@ exit
 whoami
 # Output: ubuntu
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 ## Troubleshooting -  Graphics Controller Issue
 
@@ -156,8 +155,7 @@ After I applied the change, the warning disappeared, the mouse cursor appeared c
 - **VBoxSVGA** is better suited for Windows guests
 - Small configuration choices in virtualisation can have a significant impact on usability
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+----------------------------------------------------------------------------------------------------------------------------------
 
  # Tools Used
 
@@ -168,7 +166,7 @@ After I applied the change, the warning disappeared, the mouse cursor appeared c
 |Windows 11 Pro               |             Host Operating System            |
 |Ubuntu Terminal              |        Verification and command-line testing |
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Key Concepts Covered
 
@@ -180,7 +178,7 @@ After I applied the change, the warning disappeared, the mouse cursor appeared c
 - Root vs standard user privileges (**sudo**, **exit**)
 - Virtualisation troubleshooting
  
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 # CompTIA A+ Core 2  - Independent Virtualisation Project Submitted: June 2026
 #ShareContentCompTIA

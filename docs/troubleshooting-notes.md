@@ -29,9 +29,9 @@ Two problems appeared at the same time:
     "Invalid settings detected"
 
 2- When clicking the warning icon, the tooltip read:
-   "Display: Screen page — The virtual machine is configured to use a graphics controller other than the recommended one (VMSVGA). Please consider switching unless you have a reason to keep the currently selected graphics controller."
+   "Display: Screen page -  The virtual machine is configured to use a graphics controller other than the recommended one (VMSVGA). Please consider switching unless you have a reason to keep the currently selected graphics controller."
 
-3- Once Ubuntu booted, the mouse cursor was not visible inside the VM window — making it impossible to confirm whether clicks were registering or navigate the desktop reliably.
+3- Once Ubuntu booted, the mouse cursor was not visible inside the VM window- making it impossible to confirm whether clicks were registering or navigate the desktop reliably.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -94,9 +94,9 @@ Steps taken to apply fix:
 
 After restarting the VM:
 
-1- "Invalid settings detected" warning cleared
+1- "Invalid settings detected" warning no longer displayed
 2-  Mouse cursor appeared correctly inside the Ubuntu VM
-3-  Display rendered properly — full resolution and input working
+3-  Display rendered properly leading to full resolution and input working
 4-  Ubuntu Desktop fully navigable
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -115,3 +115,16 @@ A single dropdown choice made the entire VM environment unreliable. In a real IT
 
 4 - **Restart after display setting changes**
 Display controller changes don't always take effect until the VM is fully restarted — not just paused or saved.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+# Issue Log
+
+|      ** Issue**     |            **Root Cause**        |           **Why**         |           **Status**
+|-----------------------------|----------------------------------------------|---------------------------------------------------|
+|Invalid settings warning + no mouse cursor |        Linux guests (Ubuntu, Debian etc)     | Best performance and compatibility  for Linux
+|                             |                                              |
+|         VBoxSVGA            |                 Windows guests               | Optimised for Windows display rendering
+|                             |                                              |       
+|          VBoxVGA            |              Legacy/older setups             | Outdated, causes display issues on modern guest OS
+|                             |                                              |

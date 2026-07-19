@@ -1,8 +1,8 @@
-### Troubleshooting Notes — Virtualisation Lab
+## Troubleshooting Notes — Virtualisation Lab
 Project: CompTIA A+ Core 2 – Ubuntu Desktop on Oracle VirtualBox
 Author: Andre Patterson
 Date: June 2026
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 ## Issue #1 — Invalid Settings Detected / Mouse Cursor Not Visible
 # Summary
@@ -44,13 +44,13 @@ Two problems appeared at the same time:
 **Step 2 - Navigate to Display settings**
 Went to:
 
-**Settings**  →  **Display**  →  **Screen**              
+- **Settings**  →  **Display**  →  **Screen**              
 
 
 
 **Step 3 - Identified the misconfiguration**
 
-- Found that the **Graphics Controlle**r was set to **VBoxVGA** - which had been selected by mistake during the initial VM setup.
+- Found that the **Graphics Controller** was set to **VBoxVGA** - which had been selected by mistake during the initial VM setup.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 

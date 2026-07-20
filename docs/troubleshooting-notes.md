@@ -99,10 +99,10 @@ Steps taken to apply fix:
 
 After restarting the VM:
 
-1- "Invalid settings detected" warning no longer displayed
-2-  Mouse cursor appeared correctly inside the Ubuntu VM
-3-  Display rendered properly leading to full resolution and input working
-4-  Ubuntu Desktop fully navigable
+1. "Invalid settings detected" warning no longer displayed
+2. Mouse cursor appeared correctly inside the Ubuntu VM
+3. Display rendered properly leading to full resolution and input working
+4. Ubuntu Desktop fully navigable
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

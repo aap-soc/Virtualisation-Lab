@@ -1,15 +1,16 @@
-## Troubleshooting Notes — Virtualisation Lab
-Project: CompTIA A+ Core 2 – Ubuntu Desktop on Oracle VirtualBox
+## Troubleshooting Notes - Virtualisation Lab
+Project: CompTIA A+ Core 2 -  Ubuntu Desktop on Oracle VirtualBox
 Author: Andre Patterson
 Date: June 2026
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Issue #1 — Invalid Settings Detected / Mouse Cursor Not Visible
+## Issue #1 - Invalid Settings Detected / Mouse Cursor Not Visible
 # Summary
 
 After creating the VM and booting Ubuntu for the first time, the VirtualBox settings window displayed a warning and the mouse cursor was invisible inside the VM.
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Environment
 
@@ -21,7 +22,7 @@ After creating the VM and booting Ubuntu for the first time, the VirtualBox sett
 |Stage of setup               |         First boot after VM creation         |       
 
 
-# Symptom  
+# Symptoms  
 
 Two problems appeared at the same time:
 
@@ -33,7 +34,8 @@ Two problems appeared at the same time:
 
 3- Once Ubuntu booted, the mouse cursor was not visible inside the VM window- making it impossible to confirm whether clicks were registering or navigate the desktop reliably.
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Investigation 
 
@@ -52,7 +54,8 @@ Went to:
 
 - Found that the **Graphics Controller** was set to **VBoxVGA** - which had been selected by mistake during the initial VM setup.
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Root Cause
 
@@ -70,7 +73,8 @@ The wrong graphics controller option was selecected during the initial VM config
 
 Selecting **VBoxVGA** for a Ubuntu guest caused the display layer to malfunction, resulting in the missing mouse cursor and the invalid settings warning.
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Fix Applied
 
@@ -88,7 +92,8 @@ Steps taken to apply fix:
 5. Clicked **OK** to save
 6. Restarted the VM
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Result
 
@@ -99,7 +104,7 @@ After restarting the VM:
 3-  Display rendered properly leading to full resolution and input working
 4-  Ubuntu Desktop fully navigable
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Lessons Learned
 
@@ -116,15 +121,12 @@ A single dropdown choice made the entire VM environment unreliable. In a real IT
 4 - **Restart after display setting changes**
 Display controller changes don't always take effect until the VM is fully restarted — not just paused or saved.
 
-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Issue Log
 
-|      ** Issue**     |            **Root Cause**        |           **Why**         |           **Status**
-|-----------------------------|----------------------------------------------|---------------------------------------------------|
-|Invalid settings warning + no mouse cursor |        Linux guests (Ubuntu, Debian etc)     | Best performance and compatibility  for Linux
-|                             |                                              |
-|         VBoxSVGA            |                 Windows guests               | Optimised for Windows display rendering
-|                             |                                              |       
-|          VBoxVGA            |              Legacy/older setups             | Outdated, causes display issues on modern guest OS
-|                             |                                              |
+|               Issue                       |               **Root Cause**                    |                  **Why**                         |           **Status**            |
+|-------------------------------------------|-------------------------------------------------|--------------------------------------------------|----------------------------------
+|Invalid settings warning +no mouse cursor  |   Wrong graphics controller (VBoxVGA) selected  |   Changed to VMSVGA in Display → Screen settings |             Resolved            |
+|                                           |                                                 |                                                  |                                 |
+

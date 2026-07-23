@@ -40,6 +40,15 @@ What I checked:
 - Free Disk Space: 1.86 TB available ✅
 - Virtualisation enabled in BIOS: Yes ✅ (confirmed via Task Manager)
 
+
+! [image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/42940a795c263fc24a952342fc7198cb498ceb3d/01-host-specs.png)
+
+
+
+
+
+
+
 ----------------------------------------------------------------------------------------------------------------------------------
 # Step 2 - Download Ubuntu ISO
 

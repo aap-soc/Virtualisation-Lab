@@ -1,4 +1,4 @@
-### Virtualisation Lab – Ubuntu on VirtualBox
+ ### 🖥️ Virtualisation Lab – Ubuntu on VirtualBox
 CompTIA A+ Core 2 | Independent Project | June 2026
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -17,18 +17,18 @@ A hands on virtualisation project where I deployed Ubuntu Desktop as a guest OS 
 |CPU Cores Allocated          |                      3                       |
 |Storage Allocated            |                    30 GB                     |
 
-##  What is Virtualisation?
+## 🧠 What is Virtualisation?
 
 Virtualisation is the technology that enables you to run separate operating systems inside your existing machine (such as a laptop) without needing extra hardware.
 
 In this project I used a Type 2 **Hypervisor** (VirtualBox), which runs on top of my host OS (Windows 11). This creates an isolated environment called a Virtual Machine (VM), where I installed and ran Ubuntu Linux independently.
 
-**Why this matters for cybersecurity:
-**Running an isolated VM means I can test commands, configurations, and tools without risking my host system, exactly how security professionals build lab environments.
+**Why this matters for cybersecurity**:
+- Running an isolated VM means I can test commands, configurations, and tools without risking my host system, exactly how security professionals build lab environments.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-##   Step-by-Step Setup
+## ⚙️ Step-by-Step Setup
 
 # Step 1 — Check Host Machine Resources
 
@@ -125,7 +125,7 @@ whoami
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-## Troubleshooting -  Graphics Controller Issue
+## 🔧Troubleshooting -  Graphics Controller Issue
 
 # The Problem
 

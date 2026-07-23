@@ -60,7 +60,16 @@ https://ubuntu.com/download/desktop
 - 6 GB RAM
 - 25 GB storage
 
-My host machine exceeded all of these, so I could safely allocate the minimum to the VM.
+
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/169d95b28a6756f7cf858de9f4db191f8f08a1a8/02-ubuntu-minimum-requirements.png)
+
+
+
+
+
+
+My host machine exceeded all of these (as per my specs in step 1), so I could safely allocate the minimum to the VM.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 

@@ -97,31 +97,38 @@ With the ISO attached, I started the VM and followed the Ubuntu on-screen instal
 
 Once inside Ubuntu, I opened the terminal and ran the following commands to confirm everything was working:
 
-# Gain temporary root access
+## Gain temporary root access
 sudo bash
 
-# Confirm who I am logged in as
-whoami
-# Output: root
 
-# Check for available system updates
+## Confirm who I am logged in as
+whoami
+Output: root
+
+
+## Check for available system updates
 sudo apt update
 
-# Install available upgrades
+
+## Install available upgrades
 sudo apt upgrade
 
-# Print full system summary (OS info + hardware)
+
+## Print full system summary (OS info + hardware)
 uname -a && lsb_release -a && sudo lshw -short
 
-# Check IP address and subnet
+
+## Check IP address and subnet
 ip -a
+
 
 # Exit root mode
 exit
 
+
 # Confirm back to standard user
 whoami
-# Output: ubuntu
+## Output: ubuntu
 
 ----------------------------------------------------------------------------------------------------------------------------------
 

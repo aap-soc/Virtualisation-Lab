@@ -41,7 +41,7 @@ What I checked:
 - Virtualisation enabled in BIOS: Yes ✅ (confirmed via Task Manager)
 
 
-! [image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/42940a795c263fc24a952342fc7198cb498ceb3d/01-host-specs.png)
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/42940a795c263fc24a952342fc7198cb498ceb3d/01-host-specs.png)
 
 
 

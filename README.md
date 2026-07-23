@@ -94,9 +94,22 @@ Inside VirtualBox I clicked New and configured:
 |Base Memory                  |                 6000 MB (60 GB)              |       
 |Number o fCPUs               |                      3                       |
 |Disk Size                    |                    30 GB                     |
- 
 
-I left Unattended Installation unticked to install Ubuntu manually and go through each step myself.
+
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/03-vm-configuration-1.png)
+
+
+
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/04-vm-configuration-2.png)
+
+
+
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/05-vm-configuration-3.png)
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -105,9 +118,70 @@ I left Unattended Installation unticked to install Ubuntu manually and go throug
 With the ISO attached, I started the VM and followed the Ubuntu on-screen installer:
 
 - Selected language and keyboard layout
-- Chose installation type (standard)
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/06-installing-ubuntu-1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+  
+-  install ubuntu
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/07-installing-ubuntu-2.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Set up username and password
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/08-installing-ubuntu-3.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Completed installation and rebooted into Ubuntu Desktop
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/09-installing-ubuntu-4.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -117,35 +191,98 @@ Once inside Ubuntu, I opened the terminal and ran the following commands to conf
 
 ## Gain temporary root access
 sudo bash
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/12-terminal-verify-1.png)
+
+**output: password:**
+
+
+
+
 
 
 ## Confirm who I am logged in as
 whoami
-Output: root
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/13-terminal-verify-2.png)
+
+
+
+
+
+**Output: root**
+
+
+
+
+
+
+
 
 
 ## Check for available system updates
 sudo apt update
 
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/13-terminal-verify-2.png)
+
+
+
+
+
+
+
 
 ## Install available upgrades
 sudo apt upgrade
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/14-terminal-verify-3.png)
+
+
+
+
+
+
+
+
+
 
 
 ## Print full system summary (OS info + hardware)
 uname -a && lsb_release -a && sudo lshw -short
 
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/15-terminal-verify-4.png)
+
+
+
+
+
+
+
+
+
+
 
 ## Check IP address and subnet
 ip -a
 
-
-# Exit root mode
-exit
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/16-terminal-verify-5.png)
 
 
-# Confirm back to standard user
-whoami
+
+
+
+
+
+
+
+
+# Exit root mode and Confirm back to standard user 
+1. exit
+2. whoami
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/d7b10d9e3b855104fc2862e0e54ff1e5f2c1f381/17-terminal-verify-6.png)
+
+
+
 ## Output: ubuntu
 
 ----------------------------------------------------------------------------------------------------------------------------------

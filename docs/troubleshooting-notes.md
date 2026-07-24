@@ -29,7 +29,7 @@ Two problems appeared at the same time:
 1- A warning at the bottom of the VirtualBox settings window:
     "Invalid settings detected"
 
-2- When clicking the warning icon, the tooltip read:
+2- When clicking the warning icon, the tool tip read:
    "Display: Screen page -  The virtual machine is configured to use a graphics controller other than the recommended one (VMSVGA). Please consider switching unless you have a reason to keep the currently selected graphics controller."
 
 3- Once Ubuntu booted, the mouse cursor was not visible inside the VM window- making it impossible to confirm whether clicks were registering or navigate the desktop reliably.
@@ -40,19 +40,39 @@ Two problems appeared at the same time:
 # Investigation 
 
 **Step 1 - Identified the warning source**
-- Clicked the warning triangle icon at the bottom of the VirtualBox settings window. The tooltip pointed directly to the Display: Screen page as the source of the issue.
+- Clicked the warning triangle icon at the bottom of the VirtualBox settings window. The tool tip pointed directly to the Display: Screen page as the source of the issue.
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/cf278f87784b176b3416c05e61d0dffdf59fb2bd/20-troubleshooting-3%20(1).png)
 
 
 **Step 2 - Navigate to Display settings**
 Went to:
 
-- **Settings**  →  **Display**  →  **Screen**              
+- **Settings**
+  
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/cf278f87784b176b3416c05e61d0dffdf59fb2bd/18-troubleshooting-1.png)
+
+
+  
+-   **Display** and select the  **Screen** tab 
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/cf278f87784b176b3416c05e61d0dffdf59fb2bd/20-troubleshooting-3.png)
+
+
+-            
 
 
 
 **Step 3 - Identified the misconfiguration**
 
 - Found that the **Graphics Controller** was set to **VBoxVGA** - which had been selected by mistake during the initial VM setup.
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/20-troubleshooting-3.png)
+
+
+
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -78,12 +98,24 @@ Selecting **VBoxVGA** for a Ubuntu guest caused the display layer to malfunction
 
 # Fix Applied
 
-**Settings**  →  **Display**  →  **Screen** → **Graphics Controller**
+1. Selected **Settings**
 
-Changed: **VBoxVGA**  →  **VMSVGA**
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/18-troubleshooting-1.png)
+
+   
+1a. Then selected the **Display** option and then the **Screen** tab - with the **invalid settings detected**  message displayed 
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/20-troubleshooting-3.png)
 
 
-Steps taken to apply fix:
+
+2. Clicked on the dropdown arrow on **Graphics Controller** option and changed from **VBoxVGA**  to **VMSVGA**
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/21-troubleshooting-4.png)
+
+
+
+# Steps taken to apply fix:
 
 1. Opened VM **Settings** from the VirtualBox Manager
 2. Clicked **Display** in the left sidebar
@@ -100,9 +132,19 @@ Steps taken to apply fix:
 After restarting the VM:
 
 1. "Invalid settings detected" warning no longer displayed
+   
+   ![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/21-troubleshooting-4.png)
+   
+   
 2. Mouse cursor appeared correctly inside the Ubuntu VM
-3. Display rendered properly leading to full resolution and input working
-4. Ubuntu Desktop fully navigable
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/VMSVGA%20config%20FIX-%20mouse%20cursor%20displaying.png)
+
+
+
+3. Display rendered properly leading to full resolution and input working and Ubuntu Desktop fully navigable
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/e5d369aa3e368ec7409b21e4e7acb8fedbad84b6/12-terminal-verify-1.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

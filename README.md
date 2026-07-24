@@ -275,7 +275,7 @@ ip -a
 
 
 
-# Exit root mode and Confirm back to standard user 
+## Exit root mode and Confirm back to standard user 
 1. exit
 2. whoami
 

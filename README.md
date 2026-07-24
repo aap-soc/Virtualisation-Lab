@@ -319,7 +319,7 @@ During the initial setup I had selected VBoxVGA instead of VMSVGA. Once Ubuntu b
 
 
    
-1a. Click on **Display** page with the error message displayed
+1a. Clicked on **Display** and selceted the **Screen tab**  with the **Invalid settings detected** message displayed
 
 ![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/20-troubleshooting-3.png)
 

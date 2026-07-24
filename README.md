@@ -28,9 +28,9 @@ In this project I used a Type 2 **Hypervisor** (VirtualBox), which runs on top o
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-## ⚙️ Step-by-Step Setup
+# ⚙️ Step-by-Step Setup
 
-# Step 1 — Check Host Machine Resources
+## Step 1 — Check Host Machine Resources
 
 Before installing anything, I checked my Windows 11 machine had enough resources to share with a VM.
 
@@ -50,12 +50,12 @@ What I checked:
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-# Step 2 - Download Ubuntu ISO
+## Step 2 - Download Ubuntu ISO
 
 I downloaded the Ubuntu Desktop ISO from the official site:
 https://ubuntu.com/download/desktop
 
-# Ubuntu 26.04 minimum system requirements:
+## Ubuntu 26.04 minimum system requirements:
 - 2 GHz dual-core processor
 - 6 GB RAM
 - 25 GB storage
@@ -73,7 +73,7 @@ My host machine exceeded all of these (as per my specs in step 1), so I could sa
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-# Step 3 - Download and Install Oracle VirtualBox
+## Step 3 - Download and Install Oracle VirtualBox
 
 I downloaded Oracle VirtualBox from:
 - https://www.virtualbox.org/wiki/Downloads
@@ -82,7 +82,7 @@ VirtualBox is a free, open-source Type 2 hypervisor, meaning it installs like a 
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-# Step 4 — Create the Virtual Machine
+## Step 4 — Create the Virtual Machine
 
 Inside VirtualBox I clicked New and configured:
 
@@ -113,7 +113,7 @@ Inside VirtualBox I clicked New and configured:
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-# Step 5 - Installing Ubuntu
+## Step 5 - Installing Ubuntu
 
 With the ISO attached, I started the VM and followed the Ubuntu on-screen installer:
 
@@ -185,7 +185,7 @@ With the ISO attached, I started the VM and followed the Ubuntu on-screen instal
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-# Step 6 - Verify the Setup via Terminal
+## Step 6 - Verify the Setup via Terminal
 
 Once inside Ubuntu, I opened the terminal and ran the following commands to confirm everything was working:
 
@@ -289,7 +289,7 @@ ip -a
 
 ## 🔧Troubleshooting -  Graphics Controller Issue
 
-# The Problem
+## The Problem
 
 After setting up the VM, VirtualBox displayed a warning:
 
@@ -298,19 +298,49 @@ After setting up the VM, VirtualBox displayed a warning:
 "Invalid settings detected - Display: Screen page: The virtual machine is configured to use a graphics controller other than the recommended setting (VMSVGA)."
 
 
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/20-troubleshooting-3.png)
+
+
+
 
 During the initial setup I had selected VBoxVGA instead of VMSVGA. Once Ubuntu booted, this caused the mouse cursor to not display correctly inside the VM. I could not see what I was clicking on, making the environment almost unreliable.
 
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/VBoxVGA%20config%20PROBLEM-%20mouse%20cursor%20no%20displaying.png)
 
-# The Fix:
 
-1. Went to Settings → Display → Screen
-2. Changed Graphics Controller from VBoxVGA → VMSVGA
+
+## The Fix:
+
+1. Went to **Settings**
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/18-troubleshooting-1.png)
+
+
+
+
+   
+1a. Click on **Display** page with the error message displayed
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/20-troubleshooting-3.png)
+
+
+   
+2. Changed **Graphics Controller** from VBoxVGA → VMSVGA
+
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/21-troubleshooting-4.png)
+
+
+   
 3. Restarted the VM
 
 After I applied the change, the warning disappeared, the mouse cursor appeared correctly, and the display worked as expected.
 
-# What I Learned
+![image alt](https://github.com/aap-soc/Virtualisation-Lab/blob/316343de28c2f7838b38345a982f4a41ae14880f/VMSVGA%20config%20FIX-%20mouse%20cursor%20displaying.png)
+
+
+
+
+## What I Learned
 
 - Graphics controller choice directly impacts how the VM renders display output
 - **VMSVGA** is the correct controller for Linux/Ubuntu guests in VirtualBox
